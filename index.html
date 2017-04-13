@@ -1,8 +1,40 @@
 <!DOCTYPE html>
 <html>
 <head><title>026 | Makes more simplify</title>
+  <style>
+    body {
+      margin:0;
+      width:100%;
+      height:100vh;
+      display:flex;
+      align-items:center;
+      justify-content:left;
+    }
+    .judul {
+      font-size:50px;
+      background:rgb(128, 147, 255);
+      color:#fff;
+      box-shadow:5px 5px 4px #333;
+      padding:0 10px;
+      margin-right:25px;
+    }
+    .judul:hover {
+      color:#444;
+    }
+    .deskripsi {
+      color:#fff;
+      text-shadow:2px 2px 0.2px #fff;
+      max-width:1000px;
+      left:25px;
+      opacity:.8;
+      display:none;
+    }
+    .judul:hover + .deskripsi {
+      display:block;
+    }
 </head>
 <body>
-<h1>026</h1>
+<h1 class='judul'>026</h1>
+  <h2 class='deskripsi'>Hai nama saya Dwi Ilham Maulana, ini adalah blog pribadi saya :D</h2>
 </body>
 </html>
