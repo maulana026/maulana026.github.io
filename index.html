@@ -1,261 +1,195 @@
 <!DOCTYPE html>
 <html>
-<meta content='width=device-width, initial-scale=1, maximum-scale=1' name='viewport'/>
-
-<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
-<link rel="shortcut icon" href="026Logo.png">
 <head>
-<title>_026</title>
-<style>
-@font-face {
-font-family:'code light';
-src:url('CODE Light.otf');
-}
-@font-face {
-font-family:'code bold';
-src:url('CODE Bold.otf');
+	<title>Dwi Ilham Maulana</title>
+	<style type="text/css">
+* {
+    box-sizing: border-box;
 }
 body {
-font-size:16px;
-line-height:25px;
-color:#fff;
-background:#2e2e2e;
-margin:0;
-padding:0;
-overflow:hidden;
+    display: block;
+    margin: 0;
+    padding: 0;
 }
-.kata {
-width:-moz-available;
-height:100vh;
-display:flex;
-align-items:center;
-justify-content:center;
-overflow:hidden;
+#wrapper-profil, #wrapper-nav {
+    margin: 15px;
+    padding: 15px;
+    overflow: hidden;
 }
-.kata1, .kata2, .kata3, .kata4, .kata5, .kata6, .kata7 {
-visibility:hidden;
-font-size:35px;
-animation-name:katakata;
-animation-timing-function:linear;
-position:absolute;
-text-shadow:.5px .5px 1px #2e2e2e;
-font-family:code bold;
+#wrapper-profil {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 10;
+}
+#wrapper-profil-atas {
+    overflow: hidden;
+}
+#wrapper-nav {
+    text-align: right;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: unset;
+    z-index: 2;
+}
+#wrapper-profil-img {
+    border-radius: 100%;
+    overflow: hidden;
+    width: 150px;
+    height: 150px;
+    margin: 15px;
+    box-shadow: 0 0 10px rgb(0,0,0,0.08);
+    float: left;
+}
+#wrapper-profil-img img {
+    width: 150px;
+    height: 150px;
+}
+#wrapper-profil-name {
+
+    font-family: sans-serif;
+    float: left;
+    padding: 15px;
 
 }
-.kata1 {
-animation-duration:8s;
+#wrapper-profil-name h1, #wrapper-profil-name h2, #wrapper-profil-name h3 {
+    font-weight: lighter;
+    margin: 10px 0 !important;
 }
-.kata2 {
-animation-duration:8s;
-animation-delay:8s;
+#wrapper-profil-name h1 {
+    font-size: 40px;
+    text-transform: uppercase;
 }
-.kata3 {
-animation-duration:8s;
-animation-delay:16s;
+#wrapper-profil-name h2 {
+    font-size: 25px;
 }
-.kata4 {
-animation-duration:8s;
-animation-delay:24s;
+#wrapper-profil-name h3 {
+    font-size: 20px;
 }
-.kata5 {
-animation-duration:8s;
-animation-delay:32s;
+#wrapper-nav ul {
+    display: block;
+    list-style: none;
+    margin: 0;
+    padding: 0;
 }
-.kata6 {
-animation-duration:8s;
-animation-delay:40s;
+#wrapper-nav ul a {
+    text-decoration: none;
 }
-.kata7 {
-animation-duration:8s;
-animation-delay:48s;
-animation-name:kata1;
+#wrapper-nav ul li {
+    display: block;
+    padding: 15px 20px;
+    font-size: 18px;
+    font-weight: lighter;
+    font-family: sans-serif;
+    color: #2e2e2e;
+    margin: 0 30px;
+    transition: all .4s ease-in-out;
+    background: unset;
+    text-decoration: unset;
+    border-bottom: 5px dotted #fff;
+    border-radius: 0;
+    position: relative;
 }
-.badge {
-visibility:hidden;
-animation:badge linear 10s infinite;
-position:absolute;
-animation-delay:56s;
-text-align:center;
+#wrapper-nav ul li:hover {
+    border-color: #eee;
 }
-.logo {
-height:350px;
+#email::after, #facebook::after, #instagram::after, #wa::after {
+    content: "email";
+    position: absolute;
+    border: ;
+    bottom: 0;
+    left: 0;
+    font-size: 13px;
+    color: rgb(126, 76, 77);
 }
-.text1 {
-font-family: code light;
-font-size: 40px;
+#wa::after {
+	content: "Whatsapp";
 }
-.text2 {
-font-family: code light;
+#instagram::after {
+	content: "instagram";
 }
-.text3 {
-font-family: code bold;
+#facebook::after {
+	content: "facebook";
 }
-@keyframes badge {
-0% {visibility:visible;}
+#wrapper-menu {
+    display: block;
+    width: 100%;
+    margin: 15px 0;
+    padding: 15px 0;
 }
-@keyframes katakata {
-0% {visibility:visible;opacity:0.2}
-25% {opacity:0.5;}
-50% {opacity:1}
-75% {opacity:0.4}
-80% {opacity:0.5}
-81% {opacity:0.4}
-100% {opacity:0;visibility:hidden;}
+#wrapper-menu ul {
+    text-align: center;
+    list-style: none;
+    margin: 0 0 0;
+    padding: 0;
+    overflow: hidden;
 }
-@keyframes kata1 {
-0% {visibility:visible;opacity:0.2}
-25% {opacity:0.5;font-size:350pxpx;}
-50% {opacity:1;font-size:100px;}
-75% {opacity:0.4;font-size:405px;}
-80% {opacity:0.5;font-size:300px;}
-81% {opacity:0.4;font-size:35px;}
+#wrapper-menu ul a {
+    color: #2e2e2e;
+    text-decoration: none;
+    font-style: italic;
 }
-.aku0 {
-height:150px;
-width:300px;
+#wrapper-menu ul a li {
+    padding: 15px 20px;
+    display: inline-block;
+    font-size: 17px;
 }
-.search.bar {
-position: absolute;
-top: 0;
-z-index: 20;
-width:791px;
+#wrapper-menu ul a li span {
+    padding: 0 10px;
+    visibility: hidden;
 }
-.ikon {
-font-size: 18px;
-color:#2e2e2e;
+#wrapper-menu ul a li:hover span {
+    visibility: visible;
 }
-.siap input {
-margin-left: -25px;
-width: 35px;
-opacity: 0;
+@media screen and (max-height: 480px) {
+	#wrapper-profil, #wrapper-nav {
+	    display: block;
+	    position: relative;
+	}
+	#wrapper-menu ul {
+	    text-align: left;
+	}
 }
-.cari {
-border:0;
-padding:1px;
-box-sizing:border-box;
-font-size:25px;
+@media screen and (max-width: 700px) {
+	#wrapper-nav {
+	    margin: 0;
+	    padding: 0;
+	}
 }
-.cari.oke {
-width: 85%;
-background: #fff;
-color:#2e2e2e;
-margin-right: -136px;
-border: 0;
-float: left;
-padding-right: 181px;
-padding-left: 5px;
-font-family:code light;
-text-align:center
-}
-.cari.tekan {
-color:#52f248;
-font-family:code bold;
-background:#fefefe;
-width: 15%;
-float: right;
-}
-.satu {
-display: inline-block;
-line-height: 40px;
-}
-.siap {
-width:129px;
-}
-.navigasi {
-position: absolute;
-bottom: 0;
-width: 791px;
-background:#78ff8c;
-}
-ul {
-padding: 0;
-margin: 0 auto;
-list-style: none;
-color: #2e2e2e;
-text-decoration: none;
-font-family: code bold;
-font-size: 19px;
-text-align: center;
-}
-li {
-display: inline-block;
-padding: 7px 15px;
-font-family:code bold;
-}
-.share {
-display: inline-block;
-padding: 0 15px;
-font-family:code light;
-}
-li a {
-color:#2e2e2e;
-text-decoration:none;
-}
-li:hover {
-background:#fff;
-}
-.tambah {
-font-size: 36px;
-}
-@media screen and (max-width:800px) {
-.navigasi {width:100%;}
-input {width:80%}
-.tombol_cari {width:20%;}
-.navigasi {width:100%;overflow-x:visible;overflow-y:hidden;bottom:5px;height:35px;}
-ul {width:250%;}
-li {display:inline;}
-.tambah {display:inline;}
-.search.bar {width:100%;}
-} 
-.individu {
-width:50px;
-}
-.import {
-padding-left:10px;
-}
-.atak {
-text-align:center;
-}
-</style>
+	</style>
 </head>
 <body>
-<div class='kata'>
-<div class='search bar'>
-<form method="get" action="http://www.google.com/search">
-
-<div class='pencarian'>
-<input class='cari oke satu' type="text" title='Telusuri' name="q" size="25"
-maxlength="255" value="" />
-<div class='siap satu'>
-<i class="fa fa-search ikon individu">
-<input type="submit"  name="sitesearch" value=""/> :
-</i>
-<i title='Di Web' class="fa fa-google ikon import">
-<input type="submit"  name="sitesearch" value=""/>
-</i>
-<i title='Di Blog ini' class="fa fa-file-archive-o ikon">
-<input type="submit"  name="sitesearch" value="maulana026.github.io" />
-</i>
-</div>
-<input class='cari tekan satu' type="submit" value="026" />
-</div>
-
-</form>
-</div>
-<img class='aku0 aku1' src='1.jpg'><img class='aku0 aku2' src='2.jpg'><img class='aku0 aku3' src='3.jpg'><img class='aku0 aku5' src='4.jpg'><img class='aku0 aku5' src='5.jpg'>
-<div class='kata1 atak'>Hidup</div>
-<div class='kata2 atak'>Berkah Tuhan Yang Maha Esa</div>
-<div class='kata3 atak'>Hadapi dan nikmati</div>
-<div class='kata4 atak'>Karena sulit tuk terjadi dua kali</div>
-<div class='kata5 atak'>Jadilah diri sendiri</div>
-<div class='kata6 atak'>Maulana</div>
-<div class='kata7 atak'>026</div>
-<div class='badge' title='Maulana 026 - With My Own Way'>
-<img class='logo' src='026Logo.png'>
-<div class='text1'>maulana <span class='text3'>026</span></div>
-<div class='text2'>With my own way</div>
-</div>
-<nav class='navigasi'><ul><li><a href='https://cdn.rawgit.com/maulana026/maulana026.github.io/bd091fd1/CV_final.swf' target='_blank'>Resume</a></li><li><a href='http://www.tabstime.cf' target='_blank'>Tabs Time</a></li><li><a href='resume' target='_blank'>Proyek</a></li><li><a href='resume' target='_blank'>Hubungi Saya</a></li><div class='share'>Sosial <span class='tambah'>:</span> <li title='Facebook'><a href='https://facebook.com/dwiilham.maulana?ref_component=mfreebasic_home_header&ref_page=%2Fwap%2Fhome.php&refid=8&_rdc=1&_rdr' target='_blank'><i class="fa fa-facebook-official"></i></a></li><li title='Google+'><a href='https://plus.google.com/u/0/117270717467834682378' target='_blank'><i class="fa fa-google-plus-official"></i></a></li><li title='GitHub'><a href='https://github.com/maulana026' target='_blank'><i class="fa fa-github"></i></a></li></li>
-</div>
+	<div id="wrapper">
+		<div id="wrapper-profil">
+			<div id="wrapper-profil-atas">
+				<div id="wrapper-profil-img" class="left">
+					<img src="Profil.jpg">
+				</div>
+				<div id="wrapper-profil-name">
+					<h1>Dwi Ilham Maulana</h1>
+					<h2>Jawa Tengah, Indonesia</h2>
+					<h3>26 Juni 2000</h3>
+				</div>
+			</div>
+			<div id="wrapper-menu">
+				<ul>
+					<a href="#"><li><span>></span>Informasi Umum<span><</span></li></a>
+					<a href="#"><li><span>></span>Portofolio<span><</span></li></a>
+					<a href="#"><li><span>></span>Pendidikan<span><</span></li></a>
+					<a href="#"><li><span>></span>Download Riwayat Hidup<span><</span></li></a>
+				</ul>
+			</div>
+		</div>
+		<nav id="wrapper-nav">
+			<ul>
+				<a href="mailto::dwiilham026@gmail.com"><li id="email">dwiilham026@gmail.com</li></a>
+				<a href="telp:083808432585"><li id="wa">083844461127</li></a>
+				<a href="#"><li id="facebook">Dwi Ilham Maulana</li></a>
+				<a href="#"><li id="instagram">maulana.026</li></a>
+			</ul>
+		</nav>
+	</div>
 </body>
 </html>
