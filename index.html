@@ -93,12 +93,12 @@ body {
     font-size: 18px;
     font-weight: lighter;
     font-family: sans-serif;
-    color: #2e2e2e;
+    color: rgb(0,0,0);
     margin: 0 30px;
     transition: all .4s ease-in-out;
     background: unset;
     text-decoration: unset;
-    border-bottom: 5px dotted #fff;
+    border-bottom: 5px dotted transparent;
     border-radius: 0;
     position: relative;
 }
@@ -112,7 +112,7 @@ body {
     bottom: 0;
     left: 0;
     font-size: 13px;
-    color: rgb(126, 76, 77);
+    color: rgb(0,0,0);
 }
 #wa::after {
 	content: "Whatsapp";
@@ -197,9 +197,29 @@ td {
 	    padding: 0;
 	}
 }
+/* ---- reset ---- */  canvas{ display: block; vertical-align: bottom; } /* ---- particles.js container ---- */ 
+#particles-js {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    background-color: #b61924;
+    background-image: url("");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: 50% 50%;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+} 
 	</style>
+	
 </head>
 <body>
+	<!-- particles.js container --> 
+	<div id="particles-js"></div> 
+	<!-- stats - count particles --> 
+	 <!-- particles.js lib - https://github.com/VincentGarreau/particles.js --> <script src="http://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script> 
 	<div id="wrapper">
 		<div id="wrapper-profil">
 			<div id="wrapper-profil-atas">
@@ -294,5 +314,6 @@ td {
 			document.getElementById(ide).style.display = 'block';
 		}
 	}
-</script>
+		particlesJS("particles-js", {"particles":{"number":{"value":80,"density":{"enable":true,"value_area":800}},"color":{"value":"#ffffff"},"shape":{"type":"circle","stroke":{"width":0,"color":"#000000"},"polygon":{"nb_sides":5},"image":{"src":"img/github.svg","width":100,"height":100}},"opacity":{"value":0.5,"random":false,"anim":{"enable":false,"speed":1,"opacity_min":0.1,"sync":false}},"size":{"value":3,"random":true,"anim":{"enable":false,"speed":40,"size_min":0.1,"sync":false}},"line_linked":{"enable":true,"distance":150,"color":"#ffffff","opacity":0.4,"width":1},"move":{"enable":true,"speed":6,"direction":"none","random":false,"straight":false,"out_mode":"out","bounce":false,"attract":{"enable":false,"rotateX":600,"rotateY":1200}}},"interactivity":{"detect_on":"canvas","events":{"onhover":{"enable":true,"mode":"repulse"},"onclick":{"enable":true,"mode":"push"},"resize":true},"modes":{"grab":{"distance":400,"line_linked":{"opacity":1}},"bubble":{"distance":400,"size":40,"duration":2,"opacity":8,"speed":3},"repulse":{"distance":200,"duration":0.4},"push":{"particles_nb":4},"remove":{"particles_nb":2}}},"retina_detect":true});var count_particles, stats, update; stats = new Stats; stats.setMode(0); stats.domElement.style.position = 'absolute'; stats.domElement.style.left = '0px'; stats.domElement.style.top = '0px'; document.body.appendChild(stats.domElement); count_particles = document.querySelector('.js-count-particles'); update = function() { stats.begin(); stats.end(); if (window.pJSDom[0].pJS.particles && window.pJSDom[0].pJS.particles.array) { count_particles.innerText = window.pJSDom[0].pJS.particles.array.length; } requestAnimationFrame(update); }; requestAnimationFrame(update);;
+	</script>
 </html>
