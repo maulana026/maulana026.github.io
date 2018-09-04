@@ -24,6 +24,7 @@ body {
     margin: 15px;
     padding: 15px;
     overflow: hidden;
+    display: block;
 }
 #wrapper-profil {
     position: absolute;
@@ -129,7 +130,7 @@ body {
     padding: 15px 0;
 }
 #wrapper-menu ul {
-    text-align: center;
+    text-align: left;
     list-style: none;
     margin: 0 0 0;
     padding: 0;
@@ -152,9 +153,38 @@ body {
 #wrapper-menu ul a li:hover span {
     visibility: visible;
 }
+
+
+td:first-child::after {
+
+    content: ")";
+
+}
+td:first-child::before {
+
+    content: "(";
+
+}
+td:first-child {
+
+    text-align: right;
+
+}
+td {
+
+    min-width: 300px;
+    padding: 10px 15px;
+    font-weight: lighter;
+    font-family: sans-serif;
+    font-size: 15px;
+
+}
+#personal-view, #pendidikan-view, #portofolio-view {
+    display: none;
+    margin: 15px 0;
+}
 @media screen and (max-height: 480px) {
 	#wrapper-profil, #wrapper-nav {
-	    display: block;
 	    position: relative;
 	}
 	#wrapper-menu ul {
@@ -184,13 +214,53 @@ body {
 			</div>
 			<div id="wrapper-menu">
 				<ul>
-					<a href="#"><li><span>></span>Informasi Umum<span><</span></li></a>
-					<a href="#"><li><span>></span>Portofolio<span><</span></li></a>
-					<a href="#"><li><span>></span>Pendidikan<span><</span></li></a>
+					<a href="#" onclick="buka_tutup('personal')"><li><span>></span>Informasi Umum<span><</span></li></a>
+					<a href="#" onclick="buka_tutup('portofolio')"><li><span>></span>Portofolio<span><</span></li></a>
+					<a href="#" onclick="buka_tutup('pendidikan')"><li><span>></span>Pendidikan<span><</span></li></a>
 					<a href="http://bit.ly/dwiilham"><li><span>></span>Download Riwayat Hidup<span><</span></li></a>
 				</ul>
 			</div>
+			<div id="wrapper-view">
+			<div id="personal-view">
+				<table>
+					<tbody>
+						<tr><td>Nama</td><td>Dwi Ilham Maulana</td></tr>
+						<tr><td>Asal</td><td>Cilacap, Jawa Tengah Indonesia</td></tr>
+						<tr><td>Tempat, Tanggal Lahir</td><td>Cilacap, 26 Juni 2000</td></tr>
+						<tr><td>Agama</td><td>Islam</td></tr>
+						<tr><td>Kemampuan</td><td>PHP(80%), Javascript(50%), JQuery(70%), HTML(80%), CSS(80%), Microsoft Office(50%)</td></tr>
+						<tr><td>Motto</td><td>Maju Terus!</td></tr>
+					</tbody>
+				</table>
+			</div>
+			<div id="portofolio-view">
+				<table>
+					<tbody>
+						<tr><td>Finished</td><td>Situs Resmi SMAN 1 Dayeuhluhur</td></tr>
+						<tr><td>On-Going</td><td>Pemutar Musik dengan Javascript</td></tr>
+						<tr><td>On-Going</td><td>CBT Application dengan PHP, MYSQLi</td></tr>
+						<tr><td>On-Going</td><td>Situs Konverter Online</td></tr>
+						<tr><td>Finished</td><td>Aplikasi Android dari Web SMAN 1 Dayeuhluhur</td></tr>
+						<tr><td>Finished</td><td>Aplikasi E-Raport dengan PHP, MYSQLi</td></tr>
+						<tr><td>Finished</td><td>Blog Resmi SMAN 1 Dayeuhluhur</td></tr>
+						<tr><td>Finished</td><td>Sistem Perangkingan dengan Microsoft Office Excel untuk LLA SMAN 1 Dayeuhluhur</td></tr>
+					</tbody>
+				</table>
+			</div>
+			<div id="pendidikan-view">
+				<table>
+					<tbody>
+						<tr><td>2005 - 2006</td><td>TK Kartini</td></tr>
+						<tr><td>2006 - 2012</td><td>SDN Ciwalen 01</td></tr>
+						<tr><td>2012 - 2015</td><td>SMPN 02 Dayeuhluhur</td></tr>
+						<tr><td>2015 - 2018</td><td>SMAN 1 Dayeuhluhur</td></tr>
+						<tr><td>2018 - Sekarang</td><td>Universitas Siliwangi</td></tr>
+					</tbody>
+				</table>
+			</div>
 		</div>
+		</div>
+
 		<nav id="wrapper-nav">
 			<ul>
 				<a href="mailto::dwiilham026@gmail.com"><li id="email">dwiilham026@gmail.com</li></a>
@@ -201,4 +271,28 @@ body {
 		</nav>
 	</div>
 </body>
+<script type="text/javascript">
+	var ide = 0;
+	function buka_tutup(argument) {
+		if (ide !== 0) {
+			document.getElementById(ide).style.display = 'none';
+			document.getElementById('wrapper-nav').style.position = 'absolute';
+			document.getElementById('wrapper-profil').style.position = 'absolute';
+			ide1 = ide;
+			ide = argument + "-view";
+			if (ide1 !== ide) {
+				document.getElementById('wrapper-nav').style.position = 'relative';	
+				document.getElementById('wrapper-profil').style.position = 'relative';
+				document.getElementById(ide).style.display = 'block';
+			} else {
+				ide = 0;
+			}
+		} else {
+			ide = argument + "-view";
+			document.getElementById('wrapper-nav').style.position = 'relative';	
+			document.getElementById('wrapper-profil').style.position = 'relative';
+			document.getElementById(ide).style.display = 'block';
+		}
+	}
+</script>
 </html>
