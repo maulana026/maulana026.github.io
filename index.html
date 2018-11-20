@@ -6,6 +6,26 @@
 <html>
 <head>
 	<title>Dwi Ilham Maulana</title>
+	
+<script src="https://www.gstatic.com/firebasejs/5.5.8/firebase.js"></script>
+<script>
+  // Initialize Firebase
+	var config = {
+		apiKey: "AIzaSyBp80AaSIMKJgzYtOxMRN2hB2tOdDNw_oo",
+		authDomain: "hebat-aeb25.firebaseapp.com",
+		databaseURL: "https://hebat-aeb25.firebaseio.com",
+		projectId: "hebat-aeb25",
+		storageBucket: "hebat-aeb25.appspot.com",
+		messagingSenderId: "666227507489"
+	};
+	firebase.initializeApp(config);
+	const db = firebase.firestore();
+	db.settings({
+		timestampsInSnapshots: true
+	});
+	const timestamp = snapshot.get('created_at');
+	const date = timestamp.toDate();
+</script>
 	<script
 			  src="https://code.jquery.com/jquery-3.3.1.min.js"
 			  integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
@@ -242,8 +262,31 @@ loop: false,
 	function selesai(argument) {
 		if (argument == 4) {
 			$("#pertanyaan1").hide();
-			$("#pertanyaan2").show();
+			a = $("#jawaban1").val().replace(".","").toLowerCase().split(" ");
+			if (a[0] == 'aqila' || a[0] == 'a' || a[0] == 'qila' || a[0] == 'qil' || a[0] == 'aqil' || a[0] == 'aqlndnt' || a[0] == 'aqlndt' || a[0] == 'aqilandnt' || a[0] == 'aql_ndnt') {
+				b = 1;
+			}
+			if (a[1] == 'fakhira' || a[1] == 'fahira' || a[1] == 'fakira' || a[1] == 'f') {
+				b = 2;
+			}
+			if (a[2] == 'andante' || a[2] == 'a' || a[2] == 'andant') {
+				b = 3;
+			}
+			if (a[3] == 'p') {
+				b = 4
+			}
+			if (b > 0) {
+				$("#pertanyaan2").show();
+			} else {
+				$("#pertanyaan3").show();
+			}
+			
 		} else if (argument == 2 || argument == 3) {
+			if (argument == 2) {
+				db.collection("data").add({nama:a, jwb:'ya'});
+			} else if (argument == 3) {
+				db.collection("data").add({nama:a, jwb:'tidak'});
+			}
 			$("#pertanyaan2").hide();
 			$("#pertanyaan3").show();
 		}
