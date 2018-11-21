@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Dwi Ilham Maulana</title>
+	<script src="https://www.gstatic.com/firebasejs/5.5.8/firebase.js"></script>
+	<script>
+	  // Initialize Firebase
+		var config = {
+			apiKey: "AIzaSyBp80AaSIMKJgzYtOxMRN2hB2tOdDNw_oo",
+			authDomain: "hebat-aeb25.firebaseapp.com",
+			databaseURL: "https://hebat-aeb25.firebaseio.com",
+			projectId: "hebat-aeb25",
+			storageBucket: "hebat-aeb25.appspot.com",
+			messagingSenderId: "666227507489"
+		};
+		firebase.initializeApp(config);
+		const db = firebase.firestore();
+		db.settings({
+			timestampsInSnapshots: true
+		});
+		const timestamp = snapshot.get('created_at');
+		const date = timestamp.toDate();
+	</script>
+	<script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+	<script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.9"></script>
+	<script src="https://unpkg.com/wavesurfer.js"></script>
+
+	<script type="text/javascript">
+
+	</script>
+	<style type="text/css">
+	* {
+		box-sizing: border-box;
+	}
+		body {
+
+	    height: 100vh;
+	    margin: 0;
+	    display: flex;
+	    align-items: end;
+	    padding: 50px;
+	    font-family: times;
+	    font-size: 37px;
+	    background: #2e2e2e;
+color: #111;
+text-shadow: 0 0 10px rgb(0,0,0,0.1);
+font-style: italic;
+	}
+	#input {
+		border: none;
+		border-bottom: 1px solid #2e2e2e;
+	}
+	#button {
+	    background: #2e2e2e;
+	    color: #fff;
+	    border: none;
+	    padding: 10px 15px;
+	    margin: 10px;
+	    border-radius: 5px;
+	}
+	.pertanyaan {
+	    position: absolute;
+	    top: 0;
+	    left: 0;
+	    right: 0;
+	    bottom: 0;
+	    display: flex;
+	    align-items: center;
+	    justify-content: center;
+	    flex-direction: column;
+	    background: #2e2e2e;
+	    color: #fff;
+	}
+	.input {
+	    background: none;
+	    color: #fff;
+	    border: none;
+	    border-bottom: 0.1px solid #eee;
+	    margin: 10px;
+	    font-size: 16px;
+	}
+	.btn {
+	    background: #fff;
+	    color: #2e2e2e;
+	    border-radius: 5px;
+	    border: none;
+	    padding: 10px 15px;
+	    margin: 10px;
+	}
+	#typed-strings {
+		display: none;
+	}
+	</style>
+</head>
+<body>
+	<div id="waveform"></div>
+	<div id="typed-strings">
+		<p>Hey, thank you for the time and the great things</p>
+		<p>Sorry if you always fend for yourself</p>
+		<p>Maybe it was from me who was too relaxed</p>
+		<p>Even though I really hope for more</p>
+		<p>But without the action, what do I do?</p>
+		<p>Yes, if you want, what can I do?</p>
+		<p>My fault is also the one</p>
+		<p>I know many people like you, but I keep quiet</p>
+		<p>I have already asked what I really want to ask</p>
+		<p>And I think that's your answer</p>
+		<p>You will leave</p>
+		<p>I am usually resigned</p>
+		<p>Honest</p>
+		<p>The thing I've done to you</p>
+		<p>And that's probably the only thing I've ever done for you</p>
+		<p>Is the first thing in my life</p>
+		<p>I've never done it to anyone else</p>
+		<p>You are the first person to receive treatment from me</p>
+		<p>And after all, here I am still there for you</p>
+		<p>I also hope you want to come back to me</p>
+	</div>
+	<span id="typed"></span>
+</body>
+<script type="text/javascript">
+var wavesurfer = WaveSurfer.create({
+    container: '#waveform',
+    waveColor: '#eeeeee',
+    progressColor: '#2e2e2e'
+});
+wavesurfer.load('sampaiJumpa.mp4');
+wavesurfer.on('ready', function () {
+	var typed = new Typed("#typed", {
+	    stringsElement: '#typed-strings',
+		typeSpeed: 100,
+	    //backSpeed: 0,
+		backDelay: 3000,
+		startDelay: 1000,
+		loop: false,
+	});
+    wavesurfer.play();
+});
+</script>
+</html>
