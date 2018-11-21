@@ -2,31 +2,12 @@
 <html>
 <head>
 	<title>Dwi Ilham Maulana</title>
-	<script src="https://www.gstatic.com/firebasejs/5.5.8/firebase.js"></script>
-	<script>
-	  // Initialize Firebase
-		var config = {
-			apiKey: "AIzaSyBp80AaSIMKJgzYtOxMRN2hB2tOdDNw_oo",
-			authDomain: "hebat-aeb25.firebaseapp.com",
-			databaseURL: "https://hebat-aeb25.firebaseio.com",
-			projectId: "hebat-aeb25",
-			storageBucket: "hebat-aeb25.appspot.com",
-			messagingSenderId: "666227507489"
-		};
-		firebase.initializeApp(config);
-		const db = firebase.firestore();
-		db.settings({
-			timestampsInSnapshots: true
-		});
-		const timestamp = snapshot.get('created_at');
-		const date = timestamp.toDate();
-	</script>
 	<script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
 	<script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.9"></script>
 	<script src="https://unpkg.com/wavesurfer.js"></script>
 
 	<script type="text/javascript">
-
+		
 	</script>
 	<style type="text/css">
 	* {
@@ -93,6 +74,7 @@ font-style: italic;
 	</style>
 </head>
 <body>
+	<div id="loading">Loading...</div>
 	<div id="waveform"></div>
 	<div id="typed-strings">
 		<p>Hey, thank you for the time and the great things</p>
@@ -126,6 +108,7 @@ var wavesurfer = WaveSurfer.create({
 });
 wavesurfer.load('sampaiJumpa.mp4');
 wavesurfer.on('ready', function () {
+	$("#loading").hide();
 	var typed = new Typed("#typed", {
 	    stringsElement: '#typed-strings',
 		typeSpeed: 100,
