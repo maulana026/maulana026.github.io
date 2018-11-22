@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Dwi Ilham Maulana</title>
+	<script src="jqu" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+	<script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.9"></script>
+	<script src="https://unpkg.com/wavesurfer.js"></script>
+	<style type="text/css">
+		* {
+			box-sizing: border-box;
+		}
+		#typed-strings {
+			display: none;
+		}
+		body {
+    height: 100vh;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    align-items: start;
+    justify-content: center;
+}
+#typed-wrapper {
+	text-align: center;
+margin: 10px;
+padding: 10px;
+font-family: times;
+font-size: 35px;
+font-style: italic;
+}
+#waveform {
+    position: absolute;
+    top: 55%;
+    left: 0;
+    right: 0;
+}
+	</style>
+
+</head>
+<body>
+	<div id="typed-strings">
+		<p>And that happened<br />What should I do?</p>
+	</div>
+	<div id="typed-wrapper"><span id="typed"></span></div>
+	<div id="waveform"></div>
+</body>
+<script type="text/javascript">
+var wavesurfer = WaveSurfer.create({
+    container: '#waveform',
+    waveColor: '#eeeeee',
+    progressColor: '#2e2e2e'
+});
+wavesurfer.load('takut.mp4');
+wavesurfer.on('ready', function () {
+	var typed = new Typed("#typed", {
+	    stringsElement: '#typed-strings',
+		typeSpeed: 100,
+	    //backSpeed: 0,
+		backDelay: 3500,
+		startDelay: 1000,
+		loop: false,
+	});
+    wavesurfer.play();
+});
+</script>
+</html>
