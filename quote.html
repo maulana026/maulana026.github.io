@@ -9,21 +9,16 @@
                 padding: 0;
                 margin: 0;
                 height: 100vh;
-                display: flex;
-                align-items: center;
-                justify-content: center;
-                overflow: hidden;
-                padding-top: 65px;
-            
-                a {
-                    position: fixed;
-                    top: 0;
-                    left: 0;
-                    font-family: times-new-roman;
-                    font-size: 18px;
-                    font-weight: lighter;
-                    color: #000;
-                }
+            }
+            a {
+                position: fixed;
+                top: 0;
+                left: 0;
+                font-family: times-new-roman;
+                font-size: 18px;
+                font-weight: lighter;
+                color: #000;
+            }
             h1 {
                 font-size: 17rem;
                 -webkit-text-fill-color: transparent;
@@ -34,16 +29,28 @@
                 padding: 0;
                 font-family: sans;
                 font-weight: bolder;
-            }
-            #element {
                 position: fixed;
-                bottom: 81px;
+                height: 100vh;
+                top: 0;
+                left: 0;
+                right: 0;
+                bottom: 0;
+                display: flex;
+                align-items: center;
+            }
+            .layer {
+                height: 100vh;
+                position: relative;
+            }
+            .layer .element {
+                position: absolute;
+                bottom: 10px;
                 right: 40px;
-                margin: 0;
-                font-size: 18px;
+                max-width: 500px;
+                padding-left: 10px;
                 font-family: times-new-roman;
-                font-style: oblique;
-                width: 500px;
+                font-weight: normal;
+                font-size: 20px;
                 text-align: right;
             }
         </style>
@@ -51,13 +58,59 @@
     <body>
         <a href="http://dwiilham.xyz">HOME</a>
         <h1>LOST IN THE ECHO</h1>
-        <h2 class="element" id="element" >
-                “Waktu berjalan ke Barat di waktu pagi hari matahari mengikutiku di belakang.
-                Aku berjalan mengikuti bayang-bayangku sendiri yang memanjang di depan.
-                Aku dan matahari tidak bertengkar tentang siapa di antara kami yang telah menciptakan bayang-bayang,
-                aku dan bayang-bayang tidak bertengkar tentang siapa di antara kami yang harus berjalan di depan.”
-                <br>― Sapardi Djoko Damono 
-        </h2>
-        
+        <div id="layer1" class="layer">
+            <h2 class="element">
+                    “Waktu berjalan ke Barat di waktu pagi hari matahari mengikutiku di belakang.
+                    Aku berjalan mengikuti bayang-bayangku sendiri yang memanjang di depan.
+                    Aku dan matahari tidak bertengkar tentang siapa di antara kami yang telah menciptakan bayang-bayang,
+                    aku dan bayang-bayang tidak bertengkar tentang siapa di antara kami yang harus berjalan di depan.”
+                    <br>― Sapardi Djoko Damono 
+            </h2>
+        </div>
+        <div id="layer2" class="layer">
+            <h2 class="element">
+                “Be yourself; everyone else is already taken."
+                <br>― Oscar Wilde  
+            </h2>
+        </div>
+        <div id="layer3" class="layer">
+            <h2 class="element">
+                “You've gotta dance like there's nobody watching,
+                Love like you'll never be hurt,
+                Sing like there's nobody listening,
+                And live like it's heaven on earth.”
+                <br>― William W. Purkey 
+            </h2>
+       </div>
+       <div id="layer4" class="layer">
+            <h2 class="element">
+                “Be the change that you wish to see in the world.”
+                <br>― Mahatma Gandhi 
+            </h2>
+        </div>
+        <div id="layer5" class="layer">
+            <h2 class="element">
+                “No one can make you feel inferior without your consent.”
+                <br>― Eleanor Roosevelt, This is My Story 
+            </h2>
+        </div>
+        <div id="layer5" class="layer">
+            <h2 class="element">
+                “I am enough of an artist to draw freely upon my imagination. Imagination is more important than knowledge. Knowledge is limited. Imagination encircles the world.”
+                <br>― Albert Einstein 
+            </h2>
+       </div>                           
+        <div id="layer5" class="layer">
+            <h2 class="element">
+                 “You have brains in your head. You have feet in your shoes. You can steer yourself any direction you choose. You're on your own. And you know what you know. And YOU are the one who'll decide where to go...”
+                <br>― Dr. Seuss, Oh, The Places You'll Go! 
+            </h2>
+        </div>                   
+        <div id="layer5" class="layer">
+            <h2 class="element">
+                “This life is what you make it. No matter what, you're going to mess up sometimes, it's a universal truth. But the good part is you get to decide how you're going to mess it up. Girls will be your friends - they'll act like it anyway. But just remember, some come, some go. The ones that stay with you through everything - they're your true best friends. Don't let go of them. Also remember, sisters make the best friends in the world. As for lovers, well, they'll come and go too. And baby, I hate to say it, most of them - actually pretty much all of them are going to break your heart, but you can't give up because if you give up, you'll never find your soulmate. You'll never find that half who makes you whole and that goes for everything. Just because you fail once, doesn't mean you're gonna fail at everything. Keep trying, hold on, and always, always, always believe in yourself, because if you don't, then who will, sweetie? So keep your head high, keep your chin up, and most importantly, keep smiling, because life's a beautiful thing and there's so much to smile about.”
+                <br>― Marilyn Monroe 
+            </h2>
+        </div>
     </body>
 </html>
