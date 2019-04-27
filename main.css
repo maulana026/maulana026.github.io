@@ -1,0 +1,37 @@
+html {
+    box-sizing: border-box;
+}
+body {
+    color: #202020;
+    background: #000;
+}
+#judul {
+    font-size: 6rem;
+    left: 0;
+    text-align: center;
+    margin: 5% 0;
+}
+#dwiilham {
+    padding: 10px 10px 0 10px;
+    -webkit-text-fill-color: transparent;
+    background: transparent;
+    font-weight: bold;
+    -webkit-text-stroke: #666 0.2rem;
+}
+#column-margin-3rem {
+    text-align: center;
+}
+#column-margin-3rem .card {
+    margin: 0 0 26px 0;
+}
+#column-margin-3rem .card bold a {
+    color: #00BCD4;
+    font-size: 5rem;
+    transition: all .4s ease-in-out;
+}
+#column-margin-3rem .card bold a:hover {
+    color: #fff;
+}
+#column-margin-3rem .card a button {
+    color: #2e2e2e;
+}
