@@ -54,7 +54,8 @@ function loadPost(params) {
             var htmlElement = "";
             for (let index = 0; index < apiObj.length; index++) {
                 var judul = apiObj[index].name;
-                var url = apiObj[index].path;
+                var url1 = apiObj[index].path;
+                var url = url1.replace(".html", "");
                 var download = apiObj[index].download_url;
                 var git = apiObj[index].git_url;
                 htmlElement += '<div class="card"><div class="column"><bold>';
